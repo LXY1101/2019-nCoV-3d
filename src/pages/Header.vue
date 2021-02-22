@@ -21,7 +21,7 @@
 import moment from "moment";
 
 export default {
-      
+
   data() {
     return {
       active: "/flatmap/china",
@@ -150,13 +150,14 @@ export default {
 }
 .header {
   width: 100%;
-  height: 80px;
-  background-color: #0000008a;
-  z-index: 1;
+  height: 12vh;
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
   font-size:18px;
+  background: url(../images/head_bg.png) no-repeat center center;
+  background-size: 100% 100%;
 }
 .left {
   float: left;
@@ -170,9 +171,9 @@ export default {
   display: inline-block;
   width: 120px;
   text-align: center;
-  height: 50px;
+  height: 4vh;
   position: relative;
-  line-height: 50px;
+  line-height: 4vh;
   margin-top: 15px;
   box-sizing: border-box;
   border-radius: 5px;
@@ -206,7 +207,7 @@ export default {
    color: #03d8da !important;
 }
 .span_icon{
-    line-height: 80px;
+    line-height: 8vh;
     float: right;
     color: #ffffff;
     margin-right: 40px;

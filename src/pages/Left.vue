@@ -151,7 +151,7 @@ export default {
       this.$root._dataserver
         .loadSubArea(this.$root.currentArea)
         .then((data) => {
-          console.log(data,'datassss')  
+          console.log(data,'datassss')
           var ydata = [];
           var confirmed = [];
           var suspected = [];
@@ -368,7 +368,7 @@ li {
   float: left;
   color: white;
   font-size: 16px;
-  width: 57px;
+  width: 25%;
   height: 36px;
   line-height: 36px;
   margin-top: 20px;
