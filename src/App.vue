@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-show="this.show" style="width: 100%; height: 100%">
-      <!--<div ref="earthContainer" style="width: 100%; height: 100%"></div>-->
+      <div ref="earthContainer" style="width: 100%; height: 100%"></div>
     </div>
 
     <!-- <Video
@@ -12,11 +12,11 @@
       :georef="addr.georef"
       :vtype="addr.type"
     ></Video> -->
-    <!--<Map3d v-show="this.show"></Map3d>-->
+    <Map3d v-show="this.show"></Map3d>
 
     <Header></Header>
-    <!--<TimeLine v-show="this.isShowTime"></TimeLine>-->
-    <!--<Left v-show="this.show"></Left>-->
+    <TimeLine v-show="this.isShowTime"></TimeLine>
+    <Left v-show="this.show"></Left>
     <!-- <News v-show="this.show"></News> -->
 
     <router-view :key="$route.fullPath"/>
@@ -60,7 +60,7 @@
         this.isShowTime = false
       }
 
-      /*// 创建地球
+      // 创建地球
       var earth = new XE.Earth(this.$refs.earthContainer);
       // 添加默认地球影像
       earth.sceneTree.root = {
@@ -81,7 +81,7 @@
         ]
       };
       this.$root._earth = earth;
-      window.uia = earth;*/
+      window.uia = earth;
 
       this.$router
         .push({name: "flatmap", params: {area: "china"}})

@@ -1,11 +1,5 @@
 <template>
   <div class="trend">
-    <!-- <div class="con left">
-      <div class="div_any"></div>
-    </div>
-    <div class="con right">
-      <div class="div_any"></div>
-    </div> -->
     <div class="con left" style="width: 50%">
       <div class="div_any">
         <div class="left div_any01" style="width: 100%">
@@ -17,15 +11,6 @@
             <div id="newChart9" class="p_chart" style="height: 400px"></div>
           </div>
         </div>
-        <!-- <div class="left div_any01" style="width: 100%">
-          <div
-            class="div_any_child"
-            style="width: 98%; position: relative; height: 420px"
-          >
-            <div class="div_any_title"><img src="" />现有确诊分布</div>
-            <div id="newChart8" class="p_chart" style="height: 400px"></div>
-          </div>
-        </div> -->
         <div class="left div_any01" style="width: 100%">
           <div class="div_any_child" style="height: 420px">
             <div class="div_any_title"><img src="" />全国疫情新增趋势</div>
@@ -44,18 +29,6 @@
             <div id="newChart5" class="p_chart" style="height: 400px"></div>
           </div>
         </div>
-
-        <!-- <div class="left div_any01" style="width: 100%">
-          <div
-            class="div_any_child"
-            style="width: 98%; position: relative; height: 420px"
-          >
-            <div class="div_any_title">
-              <img src="" />境外输入累计确诊省Top10
-            </div>
-            <div id="newChart7" class="p_chart" style="height: 400px"></div>
-          </div>
-        </div> -->
       </div>
     </div>
 
@@ -108,35 +81,6 @@
             <div id="newChart6" class="p_chart" style="height: 400px"></div>
           </div>
         </div>
-
-        <!-- <div class="left div_any01" style="width: 100%">
-          <div class="div_any_child" style="height: 420px">
-            <div class="div_any_title">
-              <img src="" />国内各地区疫情统计汇总
-            </div>
-            <div class="p_chart" style="height: 400px">
-              <el-table
-                :data="tableData"
-                border
-                show-summary
-                style="width: 100%"
-                class="p_table"
-              >
-                <el-table-column prop="name" label="省份"> </el-table-column>
-                <el-table-column prop="amount1" sortable label="新增">
-                </el-table-column>
-                <el-table-column prop="amount2" sortable label="现有">
-                </el-table-column>
-                <el-table-column prop="amount3" sortable label="累计">
-                </el-table-column>
-                <el-table-column prop="amount3" sortable label="死亡">
-                </el-table-column>
-                <el-table-column prop="amount3" sortable label="治愈">
-                </el-table-column>
-              </el-table>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>

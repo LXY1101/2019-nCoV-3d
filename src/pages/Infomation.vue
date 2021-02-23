@@ -5,7 +5,7 @@
         <li>
           <div class="boxall" id="echart1" style="height: 28vh">
             <div class="alltitle">模块标题样式</div>
-            <div class="allnav" ></div>
+            <div class="allnav"></div>
             <div class="boxfoot"></div>
           </div>
           <div class="boxall" id="echart2" style="height: 28vh">
@@ -14,14 +14,12 @@
             <div class="boxfoot"></div>
           </div>
           <div class="boxall" style="height: 28vh">
-            <div style="height:100%; width: 100%;">
+            <div style="height: 100%; width: 100%">
               <div class="sy" id="fb1"></div>
               <div class="sy" id="fb2"></div>
               <div class="sy" id="fb3"></div>
             </div>
-            <div class="boxfoot">
-
-            </div>
+            <div class="boxfoot"></div>
           </div>
         </li>
         <li>
@@ -34,20 +32,20 @@
             </div>
             <div class="barbox2">
               <ul class="clearfix">
-                <li class="pulll_left">2018年总收入情况</li>
-                <li class="pulll_left">2018年总支出情况</li>
+                <li class="pulll_left">累计确诊</li>
+                <li class="pulll_left">累计治愈</li>
               </ul>
             </div>
           </div>
           <div class="map">
-            <div class="map1"><img src="@/images/lbx.png"></div>
-            <div class="map2"><img src="@/images/jt.png"></div>
-            <div class="map3"><img src="@/images/map.png"></div>
+            <div class="map1"><img src="@/images/lbx.png" /></div>
+            <div class="map2"><img src="@/images/jt.png" /></div>
+            <div class="map3"><img src="@/images/map.png" /></div>
             <div class="map4" id="map_1"></div>
           </div>
         </li>
         <li>
-          <div class="boxall" id="echart4" style="height:28vh">
+          <div class="boxall" id="echart4" style="height: 28vh">
             <div class="alltitle">模块标题样式</div>
             <div class="allnav"></div>
             <div class="boxfoot"></div>
@@ -66,120 +64,38 @@
       </ul>
     </div>
   </div>
-
 </template>
 
 <script>
-  import "@/styles/comon0.css"
+import "@/styles/comon0.css";
+import {
+  echarts_1,
+  echarts_2,
+  echarts_5,
+  echarts_4,
+  echarts_6,
+  echarts_31,
+  echarts_32,
+  echarts_33,
+} from "@/js/js.js";
+import { map_1 } from "@/js/area_echarts.js"
 
-
-  export default {
-    mounted() {
-      this.echarts_1()
-    },
-    methods: {
-      echarts_1() {
-        // 基于准备好的dom，初始化echarts实例
-        const myChart = this.$echarts.init(document.getElementById('echart1'));
-
-        const option = {
-          //  backgroundColor: '#00265f',
-          tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-              type: 'shadow'
-            }
-          },
-          grid: {
-            left: '0%',
-            top: '10px',
-            right: '0%',
-            bottom: '4%',
-            containLabel: true
-          },
-          xAxis: [{
-            type: 'category',
-            data: ['商超门店', '教育培训', '房地产', '生活服务', '汽车销售', '旅游酒店', '五金建材'],
-            axisLine: {
-              show: true,
-              lineStyle: {
-                color: "rgba(255,255,255,.1)",
-                width: 1,
-                type: "solid"
-              },
-            },
-
-            axisTick: {
-              show: false,
-            },
-            axisLabel: {
-              interval: 0,
-              // rotate:50,
-              show: true,
-              splitNumber: 15,
-              textStyle: {
-                color: "rgba(255,255,255,.6)",
-                fontSize: '12',
-              },
-            },
-          }],
-          yAxis: [{
-            type: 'value',
-            axisLabel: {
-              //formatter: '{value} %'
-              show: true,
-              textStyle: {
-                color: "rgba(255,255,255,.6)",
-                fontSize: '12',
-              },
-            },
-            axisTick: {
-              show: false,
-            },
-            axisLine: {
-              show: true,
-              lineStyle: {
-                color: "rgba(255,255,255,.1	)",
-                width: 1,
-                type: "solid"
-              },
-            },
-            splitLine: {
-              lineStyle: {
-                color: "rgba(255,255,255,.1)",
-              }
-            }
-          }],
-          series: [
-            {
-              type: 'bar',
-              data: [200, 300, 300, 900, 1500, 1200, 600],
-              barWidth: '35%', //柱子宽度
-              // barGap: 1, //柱子之间间距
-              itemStyle: {
-                normal: {
-                  color: '#2f89cf',
-                  opacity: 1,
-                  barBorderRadius: 5,
-                }
-              }
-            }
-
-          ]
-        };
-
-        // 使用刚指定的配置项和数据显示图表。
-
-        if (option && typeof option === "object") {
-          myChart.setOption(option, true);
-        }
-        window.addEventListener("resize", function () {
-          myChart.resize();
-        });
-      }
-    }
-
-  }
+export default {
+  mounted() {
+    map_1();
+    echarts_1();
+    echarts_2();
+    echarts_5();
+    echarts_4();
+    echarts_6();
+    echarts_31();
+    echarts_32();
+    echarts_33();
+  },
+  methods: {
+   
+  },
+};
 </script>
 
 <style scoped>
