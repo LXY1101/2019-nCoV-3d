@@ -339,7 +339,7 @@ export default {
 .container {
   width: 15%;
   position: fixed;
-  top: 80px;
+  top: 12vh;
   bottom: 0;
   left: 0;
   background: #0000008a;

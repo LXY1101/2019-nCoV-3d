@@ -136,7 +136,7 @@ li {
   right: 0%;
   height: 30px;
   /* bottom: 300px; */
-  top: 80px;
+  top: 12vh;
 
   font-size: 18px;
   font-weight: bold;
