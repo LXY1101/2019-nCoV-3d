@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div v-show="this.show" style="width: 100%; height: 100%">
-      <div ref="earthContainer" style="width: 100%; height: 100%"></div>
+      <!-- <div ref="earthContainer" style="width: 100%; height: 100%"></div> -->
     </div>
 
     <!-- <Video
@@ -12,11 +12,11 @@
       :georef="addr.georef"
       :vtype="addr.type"
     ></Video> -->
-    <Map3d v-show="this.show"></Map3d>
+    <!-- <Map3d v-show="this.show"></Map3d> -->
 
     <Header></Header>
-    <TimeLine v-show="this.isShowTime"></TimeLine>
-    <Left v-show="this.show"></Left>
+    <!-- <TimeLine v-show="this.isShowTime"></TimeLine> -->
+    <!-- <Left v-show="this.show"></Left> -->
     <!-- <News v-show="this.show"></News> -->
 
     <router-view :key="$route.fullPath"/>
@@ -55,7 +55,7 @@
     },
     mounted() {
       console.log(this.$route, 'path')
-      if (this.$route.path.fullPath == '/trend' || this.$route.path.fullPath == '/infomation') {
+      if (this.$route.path.fullPath == '/universal' || this.$route.path.fullPath == '/infomation') {
         this.show = false
         this.isShowTime = false
       }
@@ -97,7 +97,7 @@
     watch: {
       $route(path) {
         console.log(path, 'path')
-        if (path.fullPath == '/trend' || path.fullPath == '/infomation') {
+        if (path.fullPath == '/universal' || path.fullPath == '/infomation') {
           this.show = false
           this.isShowTime = false
         } else {

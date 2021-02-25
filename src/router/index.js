@@ -5,7 +5,7 @@ import Heatmap from '@/pages/Heatmap'
 import Zhibo from '@/pages/Zhibo' 
 import Beammap from "@/pages/Beammap"
 import Zhanyi from '@/pages/Zhanyi'
-import Trend from '@/pages/Trend' 
+import Universal from '@/pages/Universal' 
 import Infomation from '@/pages/infomation' 
 import Home from '@/pages/Home'   
 Vue.use(Router)
@@ -38,9 +38,9 @@ export default new Router({
       component: Zhanyi
     },
     {
-      path: '/trend',
-      name: 'trend',
-      component: Trend
+      path: '/universal',
+      name: 'universal',
+      component: Universal
     },
     {
       path: '/infomation',
