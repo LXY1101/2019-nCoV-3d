@@ -4,19 +4,17 @@
       <ul class="clearfix">
         <li>
           <div class="boxall" id="echart1" style="height: 28vh">
-            <div class="alltitle">模块标题样式</div>
             <div class="allnav"></div>
             <div class="boxfoot"></div>
           </div>
           <div class="boxall" id="echart2" style="height: 28vh">
-            <div class="alltitle">模块标题样式</div>
             <div class="allnav"></div>
             <div class="boxfoot"></div>
           </div>
           <div class="boxall" style="height: 28vh">
             <div style="height: 100%; width: 100%">
               <div class="sy" id="fb1"></div>
-              <div class="sy" id="fb2"></div>
+              <!--<div class="sy" id="fb2"></div>-->
               <div class="sy" id="fb3"></div>
             </div>
             <div class="boxfoot"></div>
@@ -46,17 +44,14 @@
         </li>
         <li>
           <div class="boxall" id="echart4" style="height: 28vh">
-            <div class="alltitle">模块标题样式</div>
             <div class="allnav"></div>
             <div class="boxfoot"></div>
           </div>
           <div class="boxall" id="echart5" style="height: 28vh">
-            <div class="alltitle">模块标题样式</div>
             <div class="allnav"></div>
             <div class="boxfoot"></div>
           </div>
           <div class="boxall" id="echart6" style="height: 28vh">
-            <div class="alltitle">模块标题样式</div>
             <div class="allnav"></div>
             <div class="boxfoot"></div>
           </div>
@@ -75,7 +70,7 @@ import {
   echarts_4,
   echarts_6,
   echarts_31,
-  echarts_32,
+  //echarts_32,
   echarts_33,
 } from "@/js/js.js";
 import { map_1 } from "@/js/area_echarts.js"
@@ -89,11 +84,11 @@ export default {
     echarts_4();
     echarts_6();
     echarts_31();
-    echarts_32();
+    //echarts_32();
     echarts_33();
   },
   methods: {
-   
+
   },
 };
 </script>

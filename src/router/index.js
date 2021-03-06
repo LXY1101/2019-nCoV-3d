@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Flatmap from '@/pages/Flatmap' 
-import Heatmap from '@/pages/Heatmap' 
-import Zhibo from '@/pages/Zhibo' 
+import Flatmap from '@/pages/Flatmap'
+import Heatmap from '@/pages/Heatmap'
+import Zhibo from '@/pages/Zhibo'
 import Beammap from "@/pages/Beammap"
 import Zhanyi from '@/pages/Zhanyi'
-import Universal from '@/pages/Universal' 
-import Infomation from '@/pages/infomation' 
-import Home from '@/pages/Home'   
+import Universal from '@/pages/Universal'
+import Infomation from '@/pages/infomation'
+import Home from '@/pages/Home'
+import Graph from '@/pages/Graph'
 Vue.use(Router)
 
 export default new Router({
@@ -52,8 +53,14 @@ export default new Router({
       name: 'home',
       component: Home,
       children: [
-        
+
       ]
+    },
+    {
+      path: '/graph',
+      name: 'graph',
+      component: Graph,
+      children: []
     }
   ]
 })

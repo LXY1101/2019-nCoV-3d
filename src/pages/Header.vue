@@ -3,69 +3,33 @@
     <header class="header left">
       <div class="left nav">
         <ul>
-          <li><a @click="tohome()" :class="{nav_active: active == '/flatmap/china'}">采集概况</a></li>
-          <li><a @click="toInfomation()" :class="{nav_active: active == '/infomation'}">实时数据</a></li>
-          <li><a @click="totrend()" :class="{nav_active: active == '/universal'}">趋势分析</a></li>
+          <li><a @click="tohome()" :class="{nav_active: active === '/flatmap/china'}">采集概况</a></li>
+          <li><a @click="toInfomation()" :class="{nav_active: active === '/infomation'}">态势分析</a></li>
+          <li><a @click="totrend()" :class="{nav_active: active === '/universal'}">扩散路径</a></li>
         </ul>
       </div>
       <div class="left nav title" style="">
         <h2><strong>新型冠状病毒疫情数据可视化</strong></h2>
       </div>
       <div>
-        <span class="span_icon" @click="showTime()">回顾</span>
+        <span class="span_icon" @click="showTime()" v-if="active==='/flatmap/china'">回顾</span>
       </div>
     </header>
   </div>
 </template>
 <script>
-import moment from "moment";
 
 export default {
 
   data() {
     return {
       active: "/flatmap/china",
-      // areaName: "china",
-      // deathrate: 0,
-      // count: {
-      //   confirmedCount: 0,
-      //   suspectedCount: 0,
-      //   curedCount: 0,
-      //   deadCount: 0,
-      //   updateTime: 0,
-      // },
-      // dateTime: {
-      //   date: "",
-      //   day: "",
-      //   time: "",
-      // },
-      // dayMap: ["日", "一", "二", "三", "四", "五", "六"],
     };
   },
   mounted() {
-    // this.$root.$on("scene.loaded", () => {
-    //   this._earth = this.$root._earth;
-    // });
 
-    // this.updateChart();
-
-    // this.timer = setInterval(() => {
-    //   this.dateTime.date = moment().format("YYYY/M/D");
-    //   this.dateTime.day = this.dayMap[moment().day()];
-    //   this.dateTime.time = moment().format("HH:mm:ss");
-    // }, 1000);
   },
   methods: {
-    // toWorld() {
-    //   this.$router
-    //     .push({ name: "beammap", params: { area: "world" } })
-    //     .catch((err) => {
-    //       err;
-    //     });
-
-    //   this._earth.cameraViewManager.globe.flyTo();
-    //   this._earth.cameraFlight.rotateGlobe.start();
-    // },
     tohome() {
       this.$router
       .push({ name: "flatmap", params: { area: "china" } })
@@ -73,22 +37,8 @@ export default {
         err;
       });
       this.active = '/flatmap/china'
-      // this._earth.cameraViewManager.china.flyTo();
-      // this._earth.cameraFlight.rotateGlobe.cancel();
+
     },
-    // updateChart() {
-    //   this.$root._dataserver
-    //     .loadOverall(this.$root.currentArea)
-    //     .then((data) => {
-    //       this.count = data;
-    //       this.deathrate =
-    //         (
-    //           (this.count.deadCount /
-    //             (this.count.confirmedCount + this.count.curedCount)) *
-    //           100
-    //         ).toFixed(2) + "%";
-    //     });
-    // },
     totrend(){
       this.$router
         .push({ name: "universal"})
@@ -110,37 +60,9 @@ export default {
     }
   },
   watch: {
-    // "$root.currentArea"(v) {
-    //   this.areaName = v;
-    //   this.updateChart();
-    // },
-  },
-  filters: {
-    // f_time(ut) {
-    //   return moment(new Date(ut)).format("MM月DD日HH时");
-    // },
-    // f_short(fn) {
-    //   const areaMap = {
-    //     黑龙江省: "黑龙江",
-    //     宁夏回族自治区: "宁夏",
-    //     广西壮族自治区: "广西",
-    //     内蒙古自治区: "内蒙古",
-    //     新疆维吾尔自治区: "新疆",
-    //     西藏自治区: "西藏",
-    //     香港特别行政区: "香港",
-    //     澳门特别行政区: "澳门",
-    //   };
 
-    //   return areaMap[fn] || fn;
-    // },
   },
-  computed: {
-    // areaType() {
-    //   if (this.areaName == "china" || this.areaName == "world")
-    //     return this.areaName;
-    //   return "province";
-    // },
-  },
+
 };
 </script>
 <style scoped>
@@ -151,7 +73,7 @@ export default {
 .header {
   width: 100%;
   height: 12vh;
-  z-index: 999;
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
@@ -204,7 +126,7 @@ export default {
   z-index: 999;
 }
 .nav_active{
-   color: #03d8da !important;
+   color: #338bff !important;
 }
 .span_icon{
     line-height: 8vh;
@@ -214,6 +136,6 @@ export default {
 }
 .title{
   line-height: 80px;
-color:#ffffff
+  color:#ffffff;
 }
 </style>

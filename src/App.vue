@@ -1,24 +1,12 @@
 <template>
   <div id="app">
     <div v-show="this.show" style="width: 100%; height: 100%">
-      <!-- <div ref="earthContainer" style="width: 100%; height: 100%"></div> -->
+      <!--<div ref="earthContainer" style="width: 100%; height: 100%"></div>-->
     </div>
-
-    <!-- <Video
-      v-for="addr in zhiboPoints"
-      :key="addr.name"
-      :name="addr.name"
-      :url="addr.url"
-      :georef="addr.georef"
-      :vtype="addr.type"
-    ></Video> -->
-    <!-- <Map3d v-show="this.show"></Map3d> -->
-
+    <!--<Map3d v-show="this.show"></Map3d>-->
     <Header></Header>
-    <!-- <TimeLine v-show="this.isShowTime"></TimeLine> -->
-    <!-- <Left v-show="this.show"></Left> -->
-    <!-- <News v-show="this.show"></News> -->
-
+    <!--<TimeLine v-show="this.isShowTime"></TimeLine>-->
+    <!--<Left v-show="this.show"></Left>-->
     <router-view :key="$route.fullPath"/>
   </div>
 </template>
@@ -42,7 +30,7 @@
       Video,
       Map3d
     },
-    // name: 'App'
+    name: 'App',
     data() {
       return {
         show: true,
@@ -54,34 +42,34 @@
       window.dataserver = this.$root._dataserver;
     },
     mounted() {
-      console.log(this.$route, 'path')
-      if (this.$route.path.fullPath == '/universal' || this.$route.path.fullPath == '/infomation') {
+      console.log(this.$route, 'path');
+      if (this.$route.path.fullPath === '/universal' || this.$route.path.fullPath === '/infomation') {
         this.show = false
         this.isShowTime = false
       }
 
-      // 创建地球
-      var earth = new XE.Earth(this.$refs.earthContainer);
-      // 添加默认地球影像
-      earth.sceneTree.root = {
-        children: [
-          {
-            czmObject: {
-              name: "默认离线影像",
-              xbsjType: "Imagery",
-              xbsjImageryProvider: {
-                createTileMapServiceImageryProvider: {
-                  url: XE.HTML.cesiumDir + "Assets/Textures/NaturalEarthII",
-                  fileExtension: "jpg"
-                },
-                type: "createTileMapServiceImageryProvider"
-              }
-            }
-          }
-        ]
-      };
-      this.$root._earth = earth;
-      window.uia = earth;
+      //创建地球
+      // var earth = new XE.Earth(this.$refs.earthContainer);
+      // // 添加默认地球影像
+      // earth.sceneTree.root = {
+      //   children: [
+      //     {
+      //       czmObject: {
+      //         name: "默认离线影像",
+      //         xbsjType: "Imagery",
+      //         xbsjImageryProvider: {
+      //           createTileMapServiceImageryProvider: {
+      //             url: XE.HTML.cesiumDir + "Assets/Textures/NaturalEarthII",
+      //             fileExtension: "jpg"
+      //           },
+      //           type: "createTileMapServiceImageryProvider"
+      //         }
+      //       }
+      //     }
+      //   ]
+      // };
+      // this.$root._earth = earth;
+      // window.uia = earth;
 
       this.$router
         .push({name: "flatmap", params: {area: "china"}})
@@ -97,7 +85,7 @@
     watch: {
       $route(path) {
         console.log(path, 'path')
-        if (path.fullPath == '/universal' || path.fullPath == '/infomation') {
+        if (path.fullPath === '/universal' || path.fullPath === '/infomation') {
           this.show = false
           this.isShowTime = false
         } else {
@@ -131,9 +119,4 @@
   li {
     list-style: none;
   }
-
-  /* img {
-    width: 100%;
-    height: 100%;
-  } */
 </style>

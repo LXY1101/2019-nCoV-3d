@@ -7,11 +7,16 @@ import echarts from 'echarts'
 import 'echarts/map/js/china'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import BaiduMap from 'vue-baidu-map'
 
 Vue.config.productionTip = false;
 Vue.prototype.$echarts = echarts
 
 Vue.use(ElementUI);
+Vue.use(BaiduMap, {
+  /* Visit http://lbsyun.baidu.com/apiconsole/key for details about app key. */
+  ak: 'uS2dGMojGhmNswBf05FTuApPbMRzfKcV'
+});
 
 /* eslint-disable no-new */
 // XE.ready()用来加载Cesium.js等相关资源

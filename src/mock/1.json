@@ -1,0 +1,340 @@
+{
+  "name": "武汉",
+  "label": {
+    "fontSize": 18,
+    "formatter": "{b}",
+    "color": "#ffffff"
+  },
+  "children": [
+    {
+      "name": "广州",
+      "value": 6,
+      "children": [
+        {
+          "name": "湛江",
+          "value": 4
+        },
+        {
+          "name": "墨尔本",
+          "value": 1
+        },
+        {
+          "name": "珠海",
+          "value": 1,
+          "children": [
+            {
+              "name": "墨尔本",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "成都",
+      "value": 6,
+      "children": [
+        {
+          "name": "绵阳",
+          "value": 3
+        },
+        {
+          "name": "内江",
+          "value": 1
+        },
+        {
+          "name": "大连",
+          "value": 1
+        },
+        {
+          "name": "眉山",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "深圳",
+      "value": 4,
+      "children": [
+        {
+          "name": "香港",
+          "value": 3
+        },
+        {
+          "name": "湛江",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "沈阳",
+      "value": 3,
+      "children": [
+        {
+          "name": "本溪",
+          "value": 2
+        },
+        {
+          "name": "盘锡",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "云南",
+      "value": 2,
+      "children": [
+        {
+          "name": "凉山州",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "合肥",
+      "value": 2,
+      "children": [
+        {
+          "name": "宿州",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "济南",
+      "value": 2,
+      "children": [
+        {
+          "name": "秦安",
+          "value": 1
+        },
+        {
+          "name": "青岛",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "石家庄",
+      "value": 2,
+      "children": [
+        {
+          "name": "太原",
+          "value": 1
+        },
+        {
+          "name": "沈阳",
+          "value": 1,
+          "children": [
+            {
+              "name": "丹东",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "大连",
+      "value": 2,
+      "children": [
+        {
+          "name": "丹东",
+          "value": 1
+        },
+        {
+          "name": "佳木斯",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "黄冈",
+      "value": 2,
+      "children": [
+        {
+          "name": "东莞",
+          "value": 1
+        },
+        {
+          "name": "深圳",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "北京",
+      "value": 1,
+      "children": [
+        {
+          "name": "朝阳",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "兰州",
+      "value": 1,
+      "children": [
+        {
+          "name": "金昌",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "厦门",
+      "value": 1,
+      "children": [
+        {
+          "name": "深圳",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "太原",
+      "value": 1,
+      "children": [
+        {
+          "name": "潍坊",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "泰州",
+      "value": 1,
+      "children": [
+        {
+          "name": "马鞍山",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "无锡",
+      "value": 1,
+      "children": [
+        {
+          "name": "滁州",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "孝感",
+      "value": 1,
+      "children": [
+        {
+          "name": "西安",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "重庆",
+      "value": 1,
+      "children": [
+        {
+          "name": "宜宾",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "周口",
+      "value": 1,
+      "children": [
+        {
+          "name": "郑州",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "南宁",
+      "value": 1,
+      "children": [
+        {
+          "name": "佛山",
+          "value": 1,
+          "children": [
+            {
+              "name": "深圳",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "郑州",
+      "value": 1,
+      "children": [
+        {
+          "name": "西安",
+          "value": 1,
+          "children": [
+            {
+              "name": "天水",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "咸宁",
+      "value": 1,
+      "children": [
+        {
+          "name": "深圳",
+          "value": 1,
+          "children": [
+            {
+              "name": "香港",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "泰州",
+      "value": 1,
+      "children": [
+        {
+          "name": "武汉",
+          "value": 1,
+          "children": [
+            {
+              "name": "大庆",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "欧洲",
+      "value": 1,
+      "children": [
+        {
+          "name": "台湾",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "马来西亚",
+      "value": 1,
+      "children": [
+        {
+          "name": "天津",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
