@@ -156,18 +156,11 @@ function echarts_2() {
   // 基于准备好的dom，初始化echarts实例
   var myChart = echarts.init(document.getElementById('echart2'));
 
+
   const option = {
-    // title: {
-    //   text: '国内Top10',
-    //   textStyle: {
-    //     fontSize: 14,
-    //     color: '#ffffff',
-    //
-    //   }
-    //
-    // },
     legend: {
-      data: ['累计确诊'],
+      top: '0%',
+      data: ['累计治愈', '累计死亡', '治愈率', '死亡率'],
       textStyle: {
         color: '#ffffff',
         fontSize: '12',
@@ -175,18 +168,21 @@ function echarts_2() {
     },
     tooltip: {
       trigger: 'axis',
-      axisPointer: {type: 'shadow'}
+      axisPointer: {
+        type: 'shadow'
+      }
     },
+
     grid: {
-      top: 25,
-      left: 0,
-      right: 0,
-      bottom: 0,
+      left: '0%',
+      top: '30',
+      right: '0%',
+      bottom: '2%',
       containLabel: true
     },
     xAxis: [{
       type: 'category',
-      data: ['湖北', '黑龙江', '广东', '江苏', '北京', '新疆', '河北'],
+      data: ['2020/03', '2020/05', '2020/07', '2020/09', '2020/11', '2021/01', '2021/03'],
       axisLine: {
         show: true,
         lineStyle: {
@@ -213,7 +209,7 @@ function echarts_2() {
     yAxis: [{
       type: 'value',
       axisLabel: {
-        //formatter: '{value} %'
+        // formatter: '{value} %',
         show: true,
         textStyle: {
           color: "#ffffff",
@@ -237,21 +233,54 @@ function echarts_2() {
         }
       }
     }],
-    series: [
-      {
-
-        type: 'bar',
-        data: [1500, 1200, 600, 200, 300, 300, 900],
-        barWidth: '35%', //柱子宽度
-        itemStyle: {
-          normal: {
-            color: '#27d08a',
-            opacity: 1,
-            barBorderRadius: 5,
-          }
+    series: [{
+      name: '累计治愈',
+      type: 'bar',
+      data: [22, 33, 54, 65, 72, 123, 134,],
+      barWidth: '20%', //柱子宽度
+      // barGap: 1, //柱子之间间距
+      itemStyle: {
+        normal: {
+          color: '#2f89cf',
+          opacity: 1,
+          // barBorderRadius: 5,
         }
       }
-
+    },
+    {
+      name: '累计死亡',
+      type: 'bar',
+      data: [2, 3, 5, 8, 9, 14, 16,],
+      barWidth: '20%', //柱子宽度
+      // barGap: 1, //柱子之间间距
+      itemStyle: {
+        normal: {
+          color: '#27d08a',
+          opacity: 1,
+          // barBorderRadius: 5,
+        }
+      }
+    },
+    {
+      name: '治愈率',
+      type: 'line',
+      data: [56, 59, 78, 89, 97, 87, 98,],
+      itemStyle: {
+        normal: {
+          color: '#b8d204',
+        }
+      }
+    },
+    {
+      name: '死亡率',
+      type: 'line',
+      data: [2, 3, 2, 1, 3, 1, 2,],
+      itemStyle: {
+        normal: {
+          color: '#d22300',
+        }
+      }
+    }
     ]
   };
 
@@ -311,8 +340,8 @@ function echarts_4() {
 
     }, {
 
-      axisPointer: {show: false},
-      axisLine: {show: false},
+      axisPointer: { show: false },
+      axisLine: { show: false },
       position: 'bottom',
       offset: 20,
 
@@ -321,7 +350,7 @@ function echarts_4() {
 
     yAxis: [{
       type: 'value',
-      axisTick: {show: false},
+      axisTick: { show: false },
       axisLine: {
         lineStyle: {
           color: 'rgba(255,255,255,.1)'
@@ -433,119 +462,122 @@ function echarts_5() {
     tooltip: {
       trigger: 'axis',
       axisPointer: {
-        type: 'shadow'
+        lineStyle: {
+          color: '#dddc6b'
+        }
       }
     },
-
+    legend: {
+      top: '0%',
+      data: ['扩散指数', '消亡指数'],
+      textStyle: {
+        color: '#ffffff',
+        fontSize: '12',
+      }
+    },
     grid: {
-      left: '0%',
-      top: '10px',
-      right: '0%',
-      bottom: '2%',
+      left: '10',
+      top: '30',
+      right: '10',
+      bottom: '10',
       containLabel: true
     },
+
     xAxis: [{
       type: 'category',
-      data: ['2020/03', '2020/05', '2020/07', '2020/09', '2020/11', '2021/01', '2021/03'],
+      boundaryGap: false,
+      axisLabel: {
+        textStyle: {
+          color: "#ffffff",
+          fontSize: 12,
+        },
+      },
       axisLine: {
-        show: true,
         lineStyle: {
-          color: "rgba(255,255,255,.1)",
-          width: 1,
-          type: "solid"
+          color: 'rgba(255,255,255,.2)'
+        }
+
+      },
+
+      data: ['2020/01', '2020/02', '2020/03', '2020/04', '2020/05', '2020/06', '2020/07', '2020/08', '2020/09', '2020/11', '2020/12', '2021/01', '2021/02', '2021/03']
+
+    }, {
+
+      axisPointer: { show: false },
+      axisLine: { show: false },
+      position: 'bottom',
+      offset: 20,
+
+
+    }],
+
+    yAxis: [{
+      type: 'value',
+      axisTick: { show: false },
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(255,255,255,.1)'
+        }
+      },
+      axisLabel: {
+        textStyle: {
+          color: "#ffffff",
+          fontSize: 12,
         },
       },
 
-      axisTick: {
-        show: false,
-      },
-      axisLabel: {
-        interval: 0,
-        // rotate:50,
-        show: true,
-        splitNumber: 15,
-        textStyle: {
-          color: "#ffffff",
-          fontSize: '12',
-        },
-      },
-    }],
-    yAxis: [{
-      type: 'value',
-      axisLabel: {
-        // formatter: '{value} %',
-        show: true,
-        textStyle: {
-          color: "#ffffff",
-          fontSize: '12',
-        },
-      },
-      axisTick: {
-        show: false,
-      },
-      axisLine: {
-        show: true,
-        lineStyle: {
-          color: "rgba(255,255,255,.1	)",
-          width: 1,
-          type: "solid"
-        },
-      },
       splitLine: {
         lineStyle: {
-          color: "rgba(255,255,255,.1)",
+          color: 'rgba(255,255,255,.1)'
         }
       }
     }],
-    series: [{
-      name: '累计治愈',
-      type: 'bar',
-      data: [22, 33, 54, 65, 72, 123, 134,],
-      barWidth: '20%', //柱子宽度
-      // barGap: 1, //柱子之间间距
-      itemStyle: {
-        normal: {
-          color: '#2f89cf',
-          opacity: 1,
-          // barBorderRadius: 5,
-        }
-      }
-    },
+    series: [
       {
-        name: '累计死亡',
-        type: 'bar',
-        data: [2, 3, 5, 8, 9, 14, 16,],
-        barWidth: '20%', //柱子宽度
-        // barGap: 1, //柱子之间间距
+        name: '扩散指数',
+        type: 'line',
+        symbol: 'circle',
+        symbolSize: 5,
+        showSymbol: false,
+        lineStyle: {
+          normal: {
+            color: 'rgba(23, 255, 243)',
+            width: 2
+          }
+        },
         itemStyle: {
           normal: {
-            color: '#27d08a',
-            opacity: 1,
-            // barBorderRadius: 5,
+            color: 'rgba(23, 255, 243)',
+            borderWidth: 12
           }
-        }
+        },
+        data: [0.3,0.4, 0.3, 0.4, 0.3, 0.4, 0.3, 0.6, 0.2, 0.4, 0.2, 0.4, 0.3, 0.4, 0.3,]
+
       },
       {
-        name: '治愈率',
+        name: '消亡指数',
         type: 'line',
-        data: [56, 59, 78, 89, 97, 87, 98,],
+        symbol: 'circle',
+        symbolSize: 5,
+        showSymbol: false,
+        lineStyle: {
+          normal: {
+            color: 'rgba(255,100,97)',
+            width: 2
+          }
+        },
         itemStyle: {
           normal: {
-            color: '#b8d204',
+            color: 'rgba(255,100,97)',
+            borderWidth: 12
           }
-        }
+        },
+        data: [0.5, 0.3, 0.5, 0.6, 0.1, 0.5, 0.3, 0.5, 0.6, 0.4, 0.6, 0.4, 0.8, 0.3,0.5,]
+
       },
-      {
-        name: '死亡率',
-        type: 'line',
-        data: [2, 3, 2, 1, 3, 1, 2,],
-        itemStyle: {
-          normal: {
-            color: '#d22300',
-          }
-        }
-      }
+
     ]
+
   };
 
   // 使用刚指定的配置项和数据显示图表。
@@ -574,8 +606,8 @@ function echarts_6() {
   var placeHolderStyle = {
     normal: {
       color: 'rgba(255,255,255,.05)',
-      label: {show: false,},
-      labelLine: {show: false}
+      label: { show: false, },
+      labelLine: { show: false }
     },
     emphasis: {
       color: 'rgba(0,0,0,0)'
@@ -622,7 +654,7 @@ function echarts_6() {
         }, {
           value: 20,
           name: 'invisible',
-          tooltip: {show: false},
+          tooltip: { show: false },
           itemStyle: placeHolderStyle
         }]
       },
@@ -640,7 +672,7 @@ function echarts_6() {
         }, {
           value: 30,
           name: 'invisible',
-          tooltip: {show: false},
+          tooltip: { show: false },
           itemStyle: placeHolderStyle
         }]
       },
@@ -658,7 +690,7 @@ function echarts_6() {
         }, {
           value: 35,
           name: 'invisible',
-          tooltip: {show: false},
+          tooltip: { show: false },
           itemStyle: placeHolderStyle
         }]
       },
@@ -676,7 +708,7 @@ function echarts_6() {
         }, {
           value: 40,
           name: 'invisible',
-          tooltip: {show: false},
+          tooltip: { show: false },
           itemStyle: placeHolderStyle
         }]
       },
@@ -694,7 +726,7 @@ function echarts_6() {
         }, {
           value: 50,
           name: 'invisible',
-          tooltip: {show: false},
+          tooltip: { show: false },
           itemStyle: placeHolderStyle
         }]
       },]
@@ -745,14 +777,14 @@ function echarts_31() {
         center: ['50%', '42%'],
         radius: ['40%', '60%'],
         color: ['#fcff03', '#0cff9c', '#29ff05', '#0d89ff', '#0434cf'],
-        label: {show: false},
-        labelLine: {show: false},
+        label: { show: false },
+        labelLine: { show: false },
         data: [
-          {value: 1, name: '0岁以下'},
-          {value: 4, name: '20-29岁'},
-          {value: 2, name: '30-39岁'},
-          {value: 2, name: '40-49岁'},
-          {value: 1, name: '50岁以上'},
+          { value: 1, name: '0岁以下' },
+          { value: 4, name: '20-29岁' },
+          { value: 2, name: '30-39岁' },
+          { value: 2, name: '40-49岁' },
+          { value: 1, name: '50岁以上' },
         ]
       }
     ]
@@ -804,15 +836,15 @@ function echarts_32() {
         center: ['50%', '42%'],
         radius: ['40%', '60%'],
         color: ['#065aab', '#0691ab', '#06f0ab', '#06ab62', '#b8d204', '#d28c04', '#d25d04', '#d22404'],
-        label: {show: false},
-        labelLine: {show: false},
+        label: { show: false },
+        labelLine: { show: false },
         data: [
-          {value: 5, name: '华北'},
-          {value: 1, name: '东北'},
-          {value: 6, name: '华东'},
-          {value: 2, name: '中南'},
-          {value: 1, name: '西南'},
-          {value: 1, name: '西北'},
+          { value: 5, name: '华北' },
+          { value: 1, name: '东北' },
+          { value: 6, name: '华东' },
+          { value: 2, name: '中南' },
+          { value: 1, name: '西南' },
+          { value: 1, name: '西北' },
         ]
       }
     ]
@@ -862,11 +894,11 @@ function echarts_33() {
         center: ['50%', '42%'],
         radius: ['40%', '60%'],
         color: ['#065aab', '#06f0ab'],
-        label: {show: false},
-        labelLine: {show: false},
+        label: { show: false },
+        labelLine: { show: false },
         data: [
-          {value: 2, name: '男'},
-          {value: 3, name: '女'},
+          { value: 2, name: '男' },
+          { value: 3, name: '女' },
         ]
       }
     ]

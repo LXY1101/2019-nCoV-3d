@@ -5,7 +5,7 @@
         <ul>
           <li><a @click="tohome()" :class="{nav_active: active === '/flatmap/china'}">采集概况</a></li>
           <li><a @click="toInfomation()" :class="{nav_active: active === '/infomation'}">态势分析</a></li>
-          <li><a @click="totrend()" :class="{nav_active: active === '/universal'}">扩散路径</a></li>
+          <li><a @click="totrend()" :class="{nav_active: active === '/universal'}">传播扩散</a></li>
         </ul>
       </div>
       <div class="left nav title" style="">

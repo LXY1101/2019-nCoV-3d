@@ -38,7 +38,8 @@ a:hover{ color:#06c; text-decoration: none!important}
 
 .mainbox>ul>li{ width: 35%}
 .mainbox>ul>li:nth-child(2){ width: 30%;padding: 0}
-.universal_box>ul>li{ width: 50%}
+.universal_box>ul>li:nth-child(1){ width: 30%}
+.universal_box>ul>li:nth-child(2){ width: 70%}
 
 .boxall{ border: 1px solid rgba(25,186,139,.17); padding: 0.6rem;  background: rgba(255,255,255,.04) url(../images/line.png); background-size: 100% auto; position: relative; z-index: 10;}
 .boxall:before,
