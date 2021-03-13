@@ -9915,7 +9915,7 @@ function echarts_7() {
     baseOption: {
       title: {
         text: '中国疫情时间变化图',
-        subtext: '数据纯属虚构',
+        // subtext: '数据纯属虚构',
         left: 'left',
         textStyle: {
           color: '#fff'
@@ -43148,7 +43148,7 @@ function echarts_8() {
       // backgroundColor: '#080a20', //地图背景色
       title: {
         text: '47例确诊患者行程记录',
-        subtext: '数据纯属虚构',
+        // subtext: '数据纯属虚构',
         left: 'left',
         textStyle: {
           color: '#fff'
