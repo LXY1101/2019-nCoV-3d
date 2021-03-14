@@ -5,7 +5,8 @@
         <ul>
           <li><a @click="tohome()" :class="{nav_active: active === '/flatmap/china'}">采集概况</a></li>
           <li><a @click="toInfomation()" :class="{nav_active: active === '/infomation'}">态势分析</a></li>
-          <li><a @click="totrend()" :class="{nav_active: active === '/universal'}">传播扩散</a></li>
+          <li><a @click="touniversal()" :class="{nav_active: active === '/universal'}">传播扩散</a></li>
+          <li><a @click="totrend()" :class="{nav_active: active === '/trend'}">趋势预测</a></li>
         </ul>
       </div>
       <div class="left nav title" style="">
@@ -39,7 +40,7 @@ export default {
       this.active = '/flatmap/china'
 
     },
-    totrend(){
+    touniversal(){
       this.$router
         .push({ name: "universal"})
         .catch((err) => {
@@ -54,6 +55,14 @@ export default {
           err;
         });
       this.active = '/infomation'
+    },
+    totrend(){
+      this.$router
+        .push({ name: "trend"})
+        .catch((err) => {
+          err;
+        });
+      this.active = '/trend'
     },
     showTime(){
       this.$parent.showTime();
@@ -91,7 +100,7 @@ export default {
 
 .nav > ul > li {
   display: inline-block;
-  width: 120px;
+  width: 20%;
   text-align: center;
   height: 4vh;
   position: relative;

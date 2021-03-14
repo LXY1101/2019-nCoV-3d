@@ -32,13 +32,15 @@ a:hover{ color:#06c; text-decoration: none!important}
 
 /***/
 .canvas{position: absolute; width:100%; left: 0; top: 0; height: 99%; z-index: 1;}
-.mainbox,.universal_box{ padding:.1rem .1rem 0rem .1rem;margin-top:13vh;}
-.mainbox>ul,.universal_box>ul{}
-.mainbox>ul>li,.universal_box>ul>li{ float: left; padding: 0 .1rem;height: calc(100vh - 80px)}
+.mainbox,.universal_box,.trend_box{ padding:.1rem .1rem 0rem .1rem;margin-top:13vh;}
+.mainbox>ul,.universal_box>ul,.trend_box>ul{}
+.mainbox>ul>li,.universal_box>ul>li,.trend_box>ul>li{ float: left; padding: 0 .1rem;height: calc(100vh - 80px)}
 
 .mainbox>ul>li{ width: 35%}
 .mainbox>ul>li:nth-child(2){ width: 30%;padding: 0}
 .universal_box>ul>li{ width: 50%}
+.trend_box>ul>li:nth-child(1){ width: 30%}
+.trend_box>ul>li{ width: 35%}
 
 .boxall{ border: 1px solid rgba(25,186,139,.17); padding: 0.6rem;  background: rgba(255,255,255,.04) url(../images/line.png); background-size: 100% auto; position: relative; z-index: 10;}
 .boxall:before,
@@ -71,6 +73,8 @@ a:hover{ color:#06c; text-decoration: none!important}
 .map3{ width: 40%;z-index: 1;}
 .map4{ width: 90%; height: 50vh;  position: relative; z-index: 5;}
 .map5,.map6{ height: 100%; }
+.map7{ height: 100%; }
+
 
 
 

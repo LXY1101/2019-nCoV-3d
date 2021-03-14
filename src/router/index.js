@@ -6,6 +6,7 @@ import Zhibo from '@/pages/Zhibo'
 import Beammap from "@/pages/Beammap"
 import Zhanyi from '@/pages/Zhanyi'
 import Universal from '@/pages/Universal'
+import Trend from '@/pages/Trend'
 import Infomation from '@/pages/infomation'
 import Home from '@/pages/Home'
 import Graph from '@/pages/Graph'
@@ -61,6 +62,10 @@ export default new Router({
       name: 'graph',
       component: Graph,
       children: []
-    }
+    },{
+      path: '/trend',
+      name: 'trend',
+      component: Trend
+    },
   ]
 })
