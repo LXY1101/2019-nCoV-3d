@@ -96,7 +96,7 @@
 
 <script>
   import "@/styles/comon0.css";
-  import { echarts_9,echarts_10, echarts_11,echarts_12} from "@/js/trend_echarts.js"
+  import { echarts_9,echarts_10, echarts_11,echarts_12} from "@/js/trends_echarts.js"
 
   export default {
     data() {

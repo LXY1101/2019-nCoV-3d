@@ -151,7 +151,6 @@ export default {
       this.$root._dataserver
         .loadSubArea(this.$root.currentArea)
         .then((data) => {
-          console.log(data,'datassss')
           var ydata = [];
           var confirmed = [];
           var suspected = [];

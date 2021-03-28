@@ -15,19 +15,15 @@
   import Header from "@/pages/Header";
   import TimeLine from "@/pages/TimeLine";
   import Left from "@/pages/Left";
-  import News from "@/pages/News";
   import Map3d from "@/pages/Map3d";
 
   import DataServer from "./js/DataServer";
-  import Video from "@/pages/Video";
 
   export default {
     components: {
       Header,
-      News,
       Left,
       TimeLine,
-      Video,
       Map3d
     },
     name: 'App',
@@ -41,13 +37,12 @@
       this.$root._dataserver = new DataServer();
       window.dataserver = this.$root._dataserver;
     },
-    mounted() {
-      console.log(this.$route, 'path');
-      if (this.$route.path.fullPath === '/universal' || this.$route.path.fullPath === '/infomation') {
-        this.show = false
+    mounted: function () {
+      if (this.$route.path.fullPath === '/universal' || this.$route.path.fullPath === '/infomation' || this.$route.path.fullPath === '/trend') {
+        this.show = false;
         this.isShowTime = false
       }
-
+      this.$root._dataserver.loadAreaList();
       //创建地球
       // var earth = new XE.Earth(this.$refs.earthContainer);
       // 添加默认地球影像
@@ -84,12 +79,12 @@
     },
     watch: {
       $route(path) {
-        console.log(path, 'path')
+        console.log(path, 'path');
         if (path.fullPath === '/universal' || path.fullPath === '/infomation') {
-          this.show = false
+          this.show = false;
           this.isShowTime = false
         } else {
-          this.show = true
+          this.show = true;
           this.isShowTime = false
         }
       }

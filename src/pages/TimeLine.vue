@@ -76,7 +76,6 @@ export default {
       //获取所有统计时间
 
       this.$root._dataserver.getHistoryDays().then(days => {
-        console.log(days,'days');
         this.days = days;
 
         this._xData = [];

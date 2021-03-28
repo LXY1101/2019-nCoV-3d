@@ -104,6 +104,7 @@ function echarts_9() {
     myChart.resize();
   });
 }
+
 function echarts_10() {
   let myChart = echarts.init(document.getElementById("line2"));
   var option;
@@ -232,7 +233,7 @@ function echarts_11() {
     },
     xAxis: {
 
-      splitLine: { show: false },
+      splitLine: {show: false},
       min: 0,
       max: 16,
       name: 'R0',
@@ -248,7 +249,7 @@ function echarts_11() {
       }
     },
     yAxis: {
-      splitLine: { show: false },
+      splitLine: {show: false},
       min: 0,
       max: 10,
       name: '致死率%',
@@ -302,7 +303,7 @@ function echarts_12() {
     },
     xAxis: {
 
-      splitLine: { show: false },
+      splitLine: {show: false},
       min: 0,
       max: 16,
       name: 'R0',
@@ -318,7 +319,7 @@ function echarts_12() {
       }
     },
     yAxis: {
-      splitLine: { show: false },
+      splitLine: {show: false},
       min: 0,
       max: 10,
       name: '致死率%',
