@@ -231,7 +231,6 @@ class DataServer {
                             });
                         })
                     }
-                    console.log(JSON.stringify(ret),'ret')
                     resolve(ret);
 
                 } else {
@@ -282,7 +281,6 @@ class DataServer {
                         startDay += daytime;
                     }
 
-                    console.log(ret,'rettt')
                     resolve(ret);
         });
     }
