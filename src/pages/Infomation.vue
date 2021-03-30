@@ -63,6 +63,7 @@
 
 <script>
 import "@/styles/comon0.css";
+
 import {
   echarts_1,
   echarts_2,
@@ -76,8 +77,16 @@ import {
 import { map_1 } from "@/js/area_echarts.js"
 
 export default {
+  data(){
+    return {
+      infoList: []
+    }
+  },
   mounted() {
-    map_1();
+    this.$root._dataserver.getChinaDailyData().then(res=>{
+      this.infoList = res
+    });
+    map_1(this.infoList);
     echarts_1();
     echarts_2();
     echarts_5();

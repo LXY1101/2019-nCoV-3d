@@ -64,7 +64,7 @@ export default {
   },
   mounted() {
     /*
-   
+
     var self = this;
     this.$root._dataserver
       .loadScene()
@@ -206,7 +206,6 @@ export default {
         this.$root._dataserver
           .loadSubArea(this.areaName, this.$root.currentTime)
           .then(data => {
-              console.log(data,'data')
             var colorMap = {};
             self._areaKV = {};
             var length = data.subs.length;

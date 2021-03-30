@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <div v-show="this.show" style="width: 100%; height: 100%">
-      <div ref="earthContainer" style="width: 100%; height: 100%"></div>
-    </div>
-    <Map3d v-show="this.show"></Map3d>
+    <!--<div v-show="this.show" style="width: 100%; height: 100%">-->
+      <!--<div ref="earthContainer" style="width: 100%; height: 100%"></div>-->
+    <!--</div>-->
+    <!--<Map3d v-show="this.show"></Map3d>-->
     <Header></Header>
-    <TimeLine v-show="this.isShowTime"></TimeLine>
-    <Left v-show="this.show"></Left>
+    <!--<TimeLine v-show="this.isShowTime"></TimeLine>-->
+    <!--<Left v-show="this.show"></Left>-->
     <router-view :key="$route.fullPath"/>
   </div>
 </template>
@@ -45,7 +45,7 @@
       this.$root._dataserver.loadAreaList();
       //创建地球
       var earth = new XE.Earth(this.$refs.earthContainer);
-      添加默认地球影像
+      //添加默认地球影像
       earth.sceneTree.root = {
         children: [
           {
@@ -79,8 +79,7 @@
     },
     watch: {
       $route(path) {
-        console.log(path, 'path');
-        if (path.fullPath === '/universal' || path.fullPath === '/infomation') {
+        if (path.fullPath === '/universal' || path.fullPath === '/infomation' || path.fullPath === '/trend') {
           this.show = false;
           this.isShowTime = false
         } else {
